@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "works-on-my-machine"
+version = "0.1.0"
+description = "Capture a shareable machine snapshot for debugging environment-specific issues"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+  { name = "GitHub Copilot" }
+]
+dependencies = []
+
+[project.scripts]
+womm = "works_on_my_machine.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
